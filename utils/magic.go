@@ -4,6 +4,7 @@ func MagicSum(n int) int {
 	return n + n
 }
 
+//menerima satu angka n dan menghitung n pangkat n.
 func MagicPow(n int) int {
 	result := 1
 	for i := 0; i < n; i++ {
@@ -43,7 +44,7 @@ func MagicName(n int) []string {
 	}
 	return myname
 }
-
+// menghitung jumlah dari 0 hingga n dengan menambahkan semua angka dari 0 sampai n ke dalam variabel sum.
 func MagicTria(n int) int {
 
 	sum := 0
