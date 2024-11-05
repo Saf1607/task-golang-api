@@ -4,6 +4,7 @@ func MagicSum(n int) int {
 	return n + n
 }
 
+// menerima satu angka n dan menghitung n pangkat n.
 func MagicPow(n int) int {
 	result := 1
 	for i := 0; i < n; i++ {

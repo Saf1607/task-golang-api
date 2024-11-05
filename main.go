@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"regexp"
 	"strconv"
+	"task-golang-2/handler"
 	"task-golang-2/utils"
 
 	"github.com/gin-gonic/gin"
@@ -38,6 +39,12 @@ func main() {
 		account.POST("/login", authLoginHandler)
 	}
 
+	// grouping route with /auth from handlers folder
+	authHandler := handler.NewAuth() // Memanggil fungsi NewAuth dari package handlers
+	authRoute := r.Group("/auth")
+	{
+		authRoute.POST("/login", authHandler.AuthLogin)
+	}
 	r.Run()
 
 }
