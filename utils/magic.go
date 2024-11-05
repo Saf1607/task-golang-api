@@ -45,6 +45,7 @@ func MagicName(n int) []string {
 	return myname
 }
 
+// menghitung jumlah dari 0 hingga n dengan menambahkan semua angka dari 0 sampai n ke dalam variabel sum.
 func MagicTria(n int) int {
 
 	sum := 0
