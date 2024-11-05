@@ -39,12 +39,10 @@ func main() {
 		account.POST("/login", authLoginHandler)
 	}
 
-	// grouping route with /auth from handlers folder
-	authHandler := handler.NewAuth() // Memanggil fungsi NewAuth dari package handlers
+	authHandler := handler.NewAuth()
 	authRoute := r.Group("/auth")
-	{
-		authRoute.POST("/login", authHandler.AuthLogin)
-	}
+	authRoute.POST("/login", authHandler.AuthLogin)
+
 	r.Run()
 
 }
